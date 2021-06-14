@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NASANews" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.NASANews" parent="Theme.MaterialComponents.Light.DarkActionBar">
          Primary brand color.
         <item name="colorPrimary">@color/design_default_color_primary</item>
         <item name="colorPrimaryVariant">@color/design_default_color_primary_variant</item>
@@ -33,9 +33,9 @@
         <item name="colorPrimary">#E606DB</item>
         <item name="colorPrimaryDark">#9A0393</item>
         <item name="colorAccent">#062BE6</item>
-        <item name="textColorPrimary">#0C000C</item>
+<!--        <item name="textColorPrimary">#0C000C</item>
         <item name="textColorConnected">@color/green</item>
         <item name="textColorDisConnected">@color/light_gray</item>
-        <item name="themeColorPrimary">@color/pink</item>
+        <item name="themeColorPrimary">@color/pink</item>-->
     </style>
 </resources>
