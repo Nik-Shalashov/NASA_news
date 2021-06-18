@@ -42,13 +42,12 @@
 
             <ru.android1.nasanews.EquilateralImageView
                 android:id="@+id/image_view"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:contentDescription="@string/photo_of_the_day_stub"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_no_photo_vector" />
         </androidx.constraintlayout.motion.widget.MotionLayout>
@@ -91,4 +90,3 @@
         app:srcCompat="@drawable/ic_plus_fab" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
