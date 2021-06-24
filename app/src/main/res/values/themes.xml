@@ -1,16 +1,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NASANews" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <!--<item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        &lt;!&ndash; Secondary brand color. &ndash;&gt;
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>-->
-        <!-- Status bar color. -->
+    <style name="Theme.NASANews" parent="Theme.MaterialComponents.Light.DarkActionBar">
+         Primary brand color.
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorPrimaryVariant">@color/design_default_color_primary_variant</item>
+        <item name="colorOnPrimary">@color/design_default_color_on_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/design_default_color_secondary</item>
+        <item name="colorSecondaryVariant">@color/design_default_color_secondary_variant</item>
+        <item name="colorOnSecondary">@color/design_default_color_on_secondary</item>
+         Status bar color.
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="IndigoTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">#0039CB</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorError">#F44336</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#212121</item>
+        <item name="android:colorBackground">@color/design_default_color_background</item>
+        <item name="colorOnBackground">#212121</item>
+    </style>
+
+    <style name="PinkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#E606DB</item>
+        <item name="colorPrimaryDark">#9A0393</item>
+        <item name="colorAccent">#062BE6</item>
+<!--        <item name="textColorPrimary">#0C000C</item>
+        <item name="textColorConnected">@color/green</item>
+        <item name="textColorDisConnected">@color/light_gray</item>
+        <item name="themeColorPrimary">@color/pink</item>-->
     </style>
 </resources>
