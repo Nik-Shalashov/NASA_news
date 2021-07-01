@@ -1,10 +1,17 @@
 package ru.android1.nasanews.ui.picture
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.BulletSpan
+import android.text.style.ForegroundColorSpan
 import android.view.*
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -38,6 +45,7 @@ class PODFragment : Fragment() {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setBottomSheetBehavior(view.findViewById(R.id.bottom_sheet_container))
@@ -46,6 +54,23 @@ class PODFragment : Fragment() {
                 data = Uri.parse("https://en.wikipedia.org/wiki/${input_edit_text.text.toString()}")
             })
         }
+        nestedScrollView.setOnScrollChangeListener{ _, _, _, _, _ ->
+            input_layout.isSelected = nestedScrollView.canScrollVertically(-1)
+        }
+        val spannable = SpannableString("My text \nbullet one\nbullet two")
+        spannable.setSpan(
+            BulletSpan(10, 212121),
+            /* начало элемента списка */ 9, /* конец элемента списка */ 18,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(
+            BulletSpan(10, 202020),
+            /* начало элемента списка */ 20, /* конец элемента списка */ spannable.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(
+            ForegroundColorSpan(Color.RED),
+            0, 4,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            my_text_view.text = spannable
         setBottomAppBar(view)
     }
 
